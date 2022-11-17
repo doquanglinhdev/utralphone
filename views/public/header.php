@@ -251,7 +251,7 @@
                       <path d="M19.6423 13.5935H16.0651C15.5262 13.5935 15.0895 14.0302 15.0895 14.5691V22.9919C15.0895 23.5308 15.5262 23.9675 16.0651 23.9675H19.6423C20.1812 23.9675 20.6179 23.5308 20.6179 22.9919V14.5691C20.6179 14.0302 20.1812 13.5935 19.6423 13.5935ZM18.6667 22.0162H17.0407V15.5447H18.6667V22.0162Z" fill="white" />
                     </svg></div>
 
-                  <span class="header__action-text">03-5980-9826</span>
+                  <span class="header__action-text"><?= $setiing['phone_admin'] ?></span>
                 </div>
               </a>
             </div>
@@ -302,93 +302,6 @@
                 <div id="account-popover" class="popover popover--large popover--unlogged" aria-hidden="true"><svg focusable="false" class="icon icon--nav-triangle-borderless" viewBox="0 0 20 9" role="presentation">
                     <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
                   </svg>
-                  <div class="popover__panel-list">
-                    <div id="header-login-panel" class="popover__panel popover__panel--default is-selected">
-                      <div class="popover__inner">
-                        <form method="post" action="index.php?ctr=login" id="header_customer_login" accept-charset="UTF-8" name="login" class="form"><input type="hidden" name="form_type" value="customer_login" /><input type="hidden" name="utf8" value="✓" />
-                          <header class="popover__header">
-                            <h2 class="popover__title heading">Đăng nhập vào tài khoản</h2>
-                            <p class="popover__legend">Nhập e-mail và mật khẩu của bạn :</p>
-                          </header>
-
-                          <div class="form__input-wrapper form__input-wrapper--labelled">
-                            <input type="email" id="login-customer[email]" class="form__field form__field--text" name="customer[email]" required="required">
-                            <label for="login-customer[email]" class="form__floating-label">Email</label>
-                          </div>
-
-                          <div class="form__input-wrapper form__input-wrapper--labelled">
-                            <input type="password" id="login-customer[password]" class="form__field form__field--text" name="customer[password]" required="required" autocomplete="current-password">
-                            <label for="login-customer[password]" class="form__floating-label">Mật khẩu</label>
-                          </div>
-
-                          <button type="submit" class="form__submit button button--primary button--full">Đăng
-                            nhập</button>
-                        </form>
-                        <div class="popover__secondary-action">
-                          <p>Khách hàng mới ? <button data-action="show-popover-panel" aria-controls="header-register-panel" class="link link--accented">Tạo tài khoản</button>
-                          </p>
-                          <p>Quên mật khẩu ? <a href="/account#recover-password" aria-controls="header-recover-panel" class="link link--accented">Khôi phục mật khẩu</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="header-recover-panel" class="popover__panel popover__panel--sliding">
-                      <div class="popover__inner">
-                        <form method="post" action="/account/recover" accept-charset="UTF-8" name="recover" class="form"><input type="hidden" name="form_type" value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
-                          <header class="popover__header">
-                            <h2 class="popover__title heading">Khôi phục lại mật khẩu</h2>
-                            <p class="popover__legend">Nhập email của bạn : </p>
-                          </header>
-
-                          <div class="form__input-wrapper form__input-wrapper--labelled">
-                            <input type="email" id="recover-customer[recover_email]" class="form__field form__field--text" name="email" required="required">
-                            <label for="recover-customer[recover_email]" class="form__floating-label">Email</label>
-                          </div>
-
-                          <button type="submit" class="form__submit button button--primary button--full">Khôi
-                            phục</button>
-                        </form>
-                        <div class="popover__secondary-action">
-                          <p>Đã nhớ mật khẩu của bạn? <button data-action="show-popover-panel" aria-controls="header-login-panel" class="link link--accented">Quay lại đăng
-                              nhập</button></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="header-register-panel" class="popover__panel popover__panel--sliding">
-                      <div class="popover__inner">
-                        <form method="post" action="/account" id="create_customer" accept-charset="UTF-8" name="create" class="form"><input type="hidden" name="form_type" value="create_customer" /><input type="hidden" name="utf8" value="✓" />
-                          <header class="popover__header">
-                            <h2 class="popover__title heading">Tạo tài khoản mới</h2>
-                            <p class="popover__legend">Vui lòng điền vào các thông tin bên dưới:</p>
-                          </header>
-                          <div class="form__input-wrapper form__input-wrapper--labelled">
-                            <input type="text" id="customer[first_name]" class="form__field form__field--text" name="customer[first_name]" autocomplete="given-name" required="required">
-                            <label for="customer[first_name]" class="form__floating-label">Họ &amp; tên đệm</label>
-                          </div>
-
-                          <div class="form__input-wrapper form__input-wrapper--labelled">
-                            <input type="text" id="customer[last_name]" class="form__field form__field--text" name="customer[last_name]" autocomplete="family-name" required="required">
-                            <label for="customer[last_name]" class="form__floating-label">Tên</label>
-                          </div>
-                          <div class="form__input-wrapper form__input-wrapper--labelled">
-                            <input type="email" id="register-customer[email]" class="form__field form__field--text" name="customer[email]" required="required">
-                            <label for="register-customer[email]" class="form__floating-label">Email</label>
-                          </div>
-
-                          <div class="form__input-wrapper form__input-wrapper--labelled">
-                            <input type="password" id="register-customer[password]" class="form__field form__field--text" name="customer[password]" required="required" autocomplete="new-password">
-                            <label for="register-customer[password]" class="form__floating-label">Mật khẩu</label>
-                          </div>
-
-                          <button type="submit" class="form__submit button button--primary button--full">Tạo tài
-                            khoản</button>
-                        </form>
-                        <div class="popover__secondary-action">
-                          <p>Bạn đã có tài khoản ? <button data-action="show-popover-panel" aria-controls="header-login-panel" class="link link--accented">Đăng nhập</button></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             </div>
@@ -478,7 +391,7 @@
                               </path>
                               <path d="M14 1c4.971 0 9 4.029 9 9m-9-5c2.761 0 5 2.239 5 5" stroke="#d41f26"></path>
                             </g>
-                          </svg><span>Gọi ngay 03-5980-9826</span>
+                          </svg><span>Gọi ngay <?= $setiing['phone_admin'] ?></span>
                         </div>
                         <div class="mobile-menu__help-wrapper"><svg focusable="false" class="icon icon--bi-email" viewBox="0 0 22 22" role="presentation">
                             <g fill="none" fill-rule="evenodd">
@@ -530,9 +443,6 @@
                           <li class="mobile-menu__nav-item"><a href="/collections/iphone" class="mobile-menu__nav-link" data-type="menuitem">Iphone</a></li>
                           <li class="mobile-menu__nav-item"><a href="/collections/ipad" class="mobile-menu__nav-link" data-type="menuitem">Ipad</a></li>
                           <li class="mobile-menu__nav-item"><a href="/collections/phu-kien" class="mobile-menu__nav-link" data-type="menuitem">Phụ kiện</a></li>
-                          <li class="mobile-menu__nav-item"><a href="/collections/dong-ho-nam" class="mobile-menu__nav-link" data-type="menuitem">Đồng hồ Nam</a></li>
-                          <li class="mobile-menu__nav-item"><a href="/collections/dong-ho-nu" class="mobile-menu__nav-link" data-type="menuitem">Đồng hồ Nữ</a></li>
-                          <li class="mobile-menu__nav-item"><a href="/collections/dong-ho-doi" class="mobile-menu__nav-link" data-type="menuitem">Đồng hồ đôi</a></li>
                         </ul>
                       </div>
                     </div>
@@ -811,22 +721,20 @@
         <div class="container">
           <span class="recommended-search__content">
             Từ khóa phổ biến :
-          </span><a class="recommended-search__text--item" href="/collections/iphone">
+          </span><a class="recommended-search__text--item" href="">
             <span>
-              iphone 13
+              iphone 13 
             </span>
-          </a><a class="recommended-search__text--item" href="/collections/applewatch">
+          </a><a class="recommended-search__text--item" href="">
             <span>
-              apple watch
+              apple watch 
             </span>
-          </a><a class="recommended-search__text--item" href="/collections/dong-ho-nam">
+          </a>
+          <a class="recommended-search__text--item" href="">
             <span>
-              đồng hồ nam
+              macbook pro 
             </span>
-          </a><a class="recommended-search__text--item" href="/pages/trang-do-cu">
-            <span>
-              điện thoại cũ
-            </span>
+          </a>
           </a>
         </div>
       </div>
