@@ -72,17 +72,17 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="">
             <i class="fas fa-solid fa-receipt"></i>
             <span>Đơn Hàng</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="">
             <i class="fas fa-solid fa-chart-simple"></i>
             <span>Thống kê</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Biểu đồ</span></a>
     </li>
@@ -94,9 +94,15 @@
     <div class="sidebar-heading">
         SETTING
     </div>
-
-    <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
+        <a class="nav-link" href="?ctr=setting">
+        <!-- <i class="fas fa-fw fa-chart-area"></i> -->
+        <i class="fas fa-solid fa-gear"></i>
+
+            <span>Cài đặt chung</span></a>
+    </li>
+
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
             <span>Pages</span>
@@ -115,19 +121,17 @@
         </div>
     </li>
 
-    <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
     </li>
 
-    <!-- Nav Item - Tables -->
     <li class="nav-item">
         <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
-    </li>
+    </li> -->
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

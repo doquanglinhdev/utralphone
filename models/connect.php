@@ -6,3 +6,4 @@ function connection()
     $conn = new PDO("mysql:host=localhost; dbname=ultraphone; charset=utf8", "root", "");
     return $conn;
 }
+

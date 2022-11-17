@@ -1,4 +1,4 @@
-
+<?php $setiing = setiing_show(); ?>
 <!doctype html>
 <html class="no-js" lang="vi">
 
@@ -6,8 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#d41f26">
-  <title>Hoàng Hải Mobile｜Website mua sắm điện thoại, đồng hồ hàng đầu tại Nhật
-  </title>
+  <title><?= $setiing['name_site'] ?>｜Website mua sắm điện thoại </title>
   <meta name="description" content="Hoàng Hải Mobile｜Website mua sắm điện thoại, laptop, đồng hồ hàng đầu tại Nhật">
   <link rel="canonical" href="https://hoanghaimobile.jp/">
   <link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/0653/8923/2347/files/only-logo-hoanghai-mobile_96x96.png?v=1661515559" type="image/png">
@@ -233,7 +232,7 @@
     <header class="header header--inline " role="banner">
       <div class="container">
         <div class="header__inner">
-          <h1 class="header__logo"><a href="index.php" class="header__logo-link"><img class="header__logo-image" style="max-width: 90px" width="250" height="168" src="//cdn.shopify.com/s/files/1/0653/8923/2347/files/Frame_90x@2x.png?v=1659000534" alt="HoangHaiMobile"><img class="header__logo-image logo-mobile" style="max-width: 115px" width="346" src="//cdn.shopify.com/s/files/1/0653/8923/2347/files/Frame_760_115x@2x.png?v=1659271588" alt="HoangHaiMobile"></a></h1>
+          <h1 class="header__logo"><a href="index.php" class="header__logo-link"><img class="header__logo-image" src="views/public/images/logo.png" alt="HoangHaiMobile"><img class="header__logo-image logo-mobile"  width="1500" src="views/public/images/logo.png" alt="HoangHaiMobile"></a></h1>
           <div class="header__action-list">
             <div class="header__action-item hidden-tablet-and-up">
               <a class="header__action-item-link" href="/search" data-action="toggle-search" aria-expanded="false" aria-label="Tìm kiếm"><svg focusable="false" class="icon icon--search" viewBox="0 0 21 21" role="presentation">
@@ -778,12 +777,12 @@
       }
 
       .header__logo-image {
-        max-width: 115px !important;
+        max-width: 85px !important;
       }
 
       @media screen and (min-width: 641px) {
         .header__logo-image {
-          max-width: 90px !important;
+          max-width: 95px !important;
         }
       }
 

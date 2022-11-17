@@ -6,7 +6,7 @@ require_once "models/category.php";
 require_once "models/login.php";
 require_once "models/logout.php";
 require_once "models/user.php";
-
+require_once "models/setting.php";
 
 require_once "controller/controller.php";
 require_once "controller/home_controller.php";
@@ -15,11 +15,11 @@ require_once "controller/category_controller.php";
 require_once "controller/login_controller.php";
 require_once "controller/register_controller.php";
 require_once "controller/user_controller.php";
-
-
+require_once "controller/setting_controller.php";
 
 
 $ctr = isset($_GET['ctr']) ? $_GET['ctr'] : '/';
+
 switch ($ctr) {
     case '/':
 
@@ -79,6 +79,9 @@ switch ($ctr) {
         break;
     case 'delete_user':
         delete_user();
+        break;
+    case 'setting':
+        setting();
         break;
     case 'creat_user':
         if (isset($_POST['create']) && ($_POST['create'])) {
