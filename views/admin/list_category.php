@@ -18,6 +18,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Tên Loại</th>
+                                    <th>Trạng thái Menu</th>
                                     <th>Hành Động</th>
                                 </tr>
                             </thead>
@@ -37,6 +38,11 @@
                                     <tr>
                                         <td><?php echo $value["id_cate"] ?></td>
                                         <td><?php echo $value["name_cate"] ?></td>
+                                        <td><?php if($value["role"] == 1){
+                                                echo "Hiện";
+                                        } else {
+                                            echo "Ẩn";
+                                        }  ?></td>
                                         <td>
                                             <button class="btn btn-warning"><a class="text-white" href="">Sửa</a></button>
                                             <button class="btn btn-danger"><a class="text-white" href="index.php?ctr=delete_category&id=<?php echo $value["id_cate"] ?>">Xóa</a></button>

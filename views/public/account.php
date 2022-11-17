@@ -30,7 +30,11 @@
                     <a href="?ctr=account" class="product-tab__link active" data-txt-type="tab__taikhoan">
                         Tài khoản
                     </a>
-
+                    <?php if ($_SESSION['user']['role'] == 1) { ?>
+                        <a href="?ctr=admin_login" class="product-tab__link" data-txt-type="tab__taikhoan">
+                            Quản Lý Admin
+                        </a>
+                    <?php } ?>
                     <a href="" class="product-tab__link" data-txt-type="tab__hotro">
                         Hỗ trợ
                     </a>
@@ -51,7 +55,7 @@
                         <div class="product-tab__inner">
                             Bạn đã đăng nhập!
                             <div class="product-tab__inner-info">
-                            Tên: <?= $_SESSION['user']['name_user'] ?>
+                                Tên: <?= $_SESSION['user']['name_user'] ?>
                             </div>
                             <div class="product-tab__inner-info">
                                 Email: <?= $_SESSION['user']['email'] ?>

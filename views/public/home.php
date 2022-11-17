@@ -1929,7 +1929,7 @@
 
 
   </section>
-  <div id="shopify-section-1542984882560" class="shopify-section">
+  <!-- <div id="shopify-section-1542984882560" class="shopify-section">
     <section class="section section-blog" data-section-id="1542984882560" data-section-type="blog-posts">
       <div class="container">
         <div class="main-content-blog">
@@ -2091,7 +2091,7 @@
       </div>
     </section>
 
-  </div><!-- END content_for_index -->
+  </div>END content_for_index -->
 </main>
 
 <?php include_once "footer.php" ?>
