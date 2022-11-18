@@ -47,8 +47,11 @@
 
       <!-- Custom scripts for all pages-->
       <script src="views/admin/assets/js/sb-admin-2.min.js"></script>
-
+      <script src="views/admin/assets/js/jquery.dataTables.min.js"></script>
+      <script src="views/admin/assets/js/dataTables.bootstrap4.min.js"></script>
       <!-- Page level plugins -->
+      <script src="views/admin/assets/js/datatables-demo.js"></script>
+
       <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
       <!-- Page level custom scripts -->

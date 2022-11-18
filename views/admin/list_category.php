@@ -22,17 +22,6 @@
                                     <th>Hành Động</th>
                                 </tr>
                             </thead>
-                            <!-- <tfoot>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Tên Sản Phẩm</th>
-                                    <th>Giá</th>
-                                    <th>Hình</th>
-                                    <th>Mô Tả</th>
-                                    <th>Lượt Xem</th>
-                                    <th>Hành Động</th>
-                                </tr>
-                            </tfoot> -->
                             <tbody>
                                 <?php foreach ($cate as $value) { ?>
                                     <tr>
