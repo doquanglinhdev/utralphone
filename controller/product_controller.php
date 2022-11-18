@@ -13,6 +13,23 @@ function add_product()
     }
 }
 
+function edit_product()
+{
+    if (isset($_SESSION['admin'])) {
+        $id = $_GET['id'];
+        $pro_one = product_one($id);
+        $cate_pro = category_all();
+        renderadmin(
+            "edit_product",
+            ['pro_one' => $pro_one, 
+            'cate_pro' => $cate_pro],
+        );
+    } else {
+        header("location: index.php?ctr=admin_login");
+        exit;
+    }
+}
+
 function list_product()
 {
     if (isset($_SESSION['admin'])) {

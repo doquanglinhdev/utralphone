@@ -19,6 +19,7 @@
   <!-- Custom styles for this template-->
   <link href="views/admin/assets/css/sb-admin-2.min.css" rel="stylesheet">
   <link href="views/admin/assets/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <script src="//cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
 
 
 </head>

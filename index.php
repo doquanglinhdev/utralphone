@@ -93,6 +93,15 @@ switch ($ctr) {
     case 'product':
         detail_product();
         break;
+    case 'edit_product':
+        edit_product();
+        break;
+    case 'edit_category':
+        if (isset($_POST['btn_save']) && ($_POST['btn_save'])) {
+            // create_user_admin();
+        };
+        edit_category();
+        break;
     default:
         // show_error();
 }

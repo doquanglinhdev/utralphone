@@ -35,8 +35,8 @@
                                         <td><?php echo $value["short_des"] ?></td>
                                         <td><?php echo $value["view"] ?></td>
                                         <td>
-                                            <button class="btn btn-warning"><a class="text-white" href="">Sửa</a></button>
-                                            <button class="btn btn-danger"><a class="text-white" href="index.php?ctr=delete_product&id=<?php echo $value["id_pro"] ?>">Xóa</a></button>
+                                            <button class="btn btn-warning"><a class="text-white" href="?ctr=edit_product&id=<?php echo $value["id_cate"] ?>">Sửa</a></button>
+                                            <button class="btn btn-danger"><a class="text-white" href="?ctr=delete_product&id=<?php echo $value["id_pro"] ?>">Xóa</a></button>
                                         </td>
                                     </tr>
                                 <?php } ?>

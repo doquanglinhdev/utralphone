@@ -15,17 +15,28 @@ function list_category()
 
 function add_category()
 {
-    // if (isset($_SESSION['useradmin'])) {
-    //     $loai = loai_all();
-    //     renderadmin(
-    //         "add_product",
-    //         ['loai' => $loai],
-    //     );
-    // } else {
-    //     header("location: index.php?ctr=login-admin");
-    //     exit;
-    // }
-    renderadmin("add_category");
+    if (isset($_SESSION['admin'])) {
+        renderadmin("add_category");
+    } else {
+        header("location: index.php?ctr=login-admin");
+        exit;
+    }
+    
+}
+
+function edit_category()
+{
+    if (isset($_SESSION['admin'])) {
+        $id = $_GET['id'];
+        $cate_one = category_one($id);
+        renderadmin(
+            "edit_category",
+            ['cate_one' => $cate_one],
+        );
+    } else {
+        header("location: index.php?ctr=admin_login");
+        exit;
+    }
 }
 
 function save_category()

@@ -33,8 +33,8 @@
                                             echo "Ẩn";
                                         }  ?></td>
                                         <td>
-                                            <button class="btn btn-warning"><a class="text-white" href="">Sửa</a></button>
-                                            <button class="btn btn-danger"><a class="text-white" href="index.php?ctr=delete_category&id=<?php echo $value["id_cate"] ?>">Xóa</a></button>
+                                            <button class="btn btn-warning"><a class="text-white" href="?ctr=edit_category&id=<?php echo $value["id_cate"] ?>">Sửa</a></button>
+                                            <button class="btn btn-danger"><a class="text-white" href="?ctr=delete_category&id=<?php echo $value["id_cate"] ?>">Xóa</a></button>
                                         </td>
                                     </tr>
                                 <?php } ?>

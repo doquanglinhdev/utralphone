@@ -24,3 +24,12 @@ function delete_cate()
     $conn->exec($sql);
     header("location: index.php?ctr=list_category");
 }
+function category_one($id)
+{
+    $conn = connection();
+    $sql = "SELECT * FROM category WHERE id_cate=?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$id]);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $result;
+}
