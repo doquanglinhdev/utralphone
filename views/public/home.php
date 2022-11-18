@@ -259,9 +259,12 @@
                         </div>
                       </a>
                       <div class="product-item__info">
-                        <form method="post" action="/cart/add" id="product_form_id_7831299162331_1659007692be345d67" accept-charset="UTF-8" class="product-item__action-list button-stack" enctype="multipart/form-data">
-                          <input type="hidden" name="form_type" value="product" />
-                          <input type="hidden" name="utf8" value="✓" />
+                        <form method="post" action="?ctr=addtocart" accept-charset="UTF-8" class="product-item__action-list button-stack" enctype="multipart/form-data">
+                          <input type="hidden" name="idpro" value="<?= $value['id_pro'] ?>"/>
+                          <input type="hidden" name="namepro" value="<?= $value['name_pro'] ?>"/>
+                          <input type="hidden" name="imgpro" value="<?= $value['img_pro'] ?>"/>
+                          <input type="hidden" name="pricepro" value="<?= $value['price'] ?>"/>
+                          <!-- <input type="hidden" name="pricepro"/> -->
                           <div class="product-item__info-inner">
 
                             <a href="?ctr=product&id=<?php echo $value['id_pro'] ?>" class="product-item__title text--strong link"><?php echo $value['name_pro'] ?></a>
@@ -276,12 +279,12 @@
                             </div>
 
                           </div>
-                          <input type="hidden" name="quantity" value="1">
-                          <input type="hidden" data-txt="2" data-product-id="7831299162331" name="id" value="43373631930587">
+
+
                           <div data-product-id="7831299162331" class="default-url hidden-phone hidden-tablet hidden-desktop" style="display: none;">
                             /products/airpods-2</div>
                           <div class="form-button__action">
-                            <button type="submit" class="product-item__action-button button button--small button--primary" data-action="add-to-cart">Thêm vào giỏ</button>
+                            <button type="submit" class="product-item__action-button button button--small button--primary" data-action="add-to-cart" name="add_cart" value="1">Thêm vào giỏ</button>
 
                             <button data-with-epi="true" class="swym-button swym-add-to-wishlist-view-product product_7831299162331 product__wishlist inloader" data-swaction="addToWishlist" data-product-id="7831299162331" data-variant-id="43373631930587" data-product-url="https://hoanghaimobile.jp/products/airpods-2">
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

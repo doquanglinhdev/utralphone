@@ -25,17 +25,6 @@
                                     <th>Hành Động</th>
                                 </tr>
                             </thead>
-                            <!-- <tfoot>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Tên Sản Phẩm</th>
-                                    <th>Giá</th>
-                                    <th>Hình</th>
-                                    <th>Mô Tả</th>
-                                    <th>Lượt Xem</th>
-                                    <th>Hành Động</th>
-                                </tr>
-                            </tfoot> -->
                             <tbody>
                                 <?php foreach ($user as $value) { ?>
                                     <tr>
@@ -44,7 +33,12 @@
                                         <td><?php echo $value["name_user"] ?></td>
                                         <td><?php echo $value["email"] ?></td>
                                         <td><?php echo $value["address"] ?></td>
-                                        <td><?php if($value["role"] == 1){echo "Admin";}else{echo "Thành Viên";}; ?></td>
+                                        <td><?php if ($value["role"] == 1) {
+                                                echo "<span class='badge badge-danger'>Admin</span>";
+                                            } else {
+                                                echo "<span class='badge badge-success'>Thành Viên</span>
+                                                ";
+                                            }; ?></td>
                                         <td>
                                             <button class="btn btn-warning"><a class="text-white" href="">Sửa</a></button>
                                             <button class="btn btn-danger"><a class="text-white" href="?ctr=delete_user&id=<?php echo $value["id_user"] ?>">Xóa</a></button>

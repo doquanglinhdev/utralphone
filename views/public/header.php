@@ -1,4 +1,4 @@
-<?php $setiing = setiing_show(); ?>
+<?php $setiing = setiing_show(); $count_pro = count_cart();?>
 <!doctype html>
 <html class="no-js" lang="vi">
 
@@ -306,7 +306,7 @@
               </div>
             </div>
             <div class="header__action-item header__action-item--cart">
-              <a class="header__action-item-link header__cart-toggle" href="/cart" aria-controls="mini-cart" aria-expanded="false" data-action="toggle-mini-cart" data-no-instant>
+              <a class="header__action-item-link header__cart-toggle" href="?ctr=cart" aria-controls="mini-cart" aria-expanded="false" data-action="toggle-mini-cart" data-no-instant>
                 <div class="header__action-item-content">
                   <div class="header__cart-icon icon-state" aria-expanded="false">
                     <span class="icon-state__primary"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -319,7 +319,7 @@
                             <rect width="24" height="24" fill="white" />
                           </clipPath>
                         </defs>
-                      </svg><span class="header__cart-count">0</span>
+                      </svg><span class="header__cart-count"><?= $count_pro ?></span>
 
                     </span>
 
@@ -332,7 +332,7 @@
                   <span class="hidden-pocket hidden-lap">Giỏ hàng</span>
                 </div>
               </a>
-              <form method="post" action="/cart" id="mini-cart" class="mini-cart" aria-hidden="true" novalidate="novalidate" data-item-count="0">
+              <form method="post" action="?ctr=cart" id="mini-cart" class="mini-cart" aria-hidden="true" novalidate="novalidate" data-item-count="0">
                 <input type="hidden" name="attributes[collection_products_per_page]" value="">
                 <input type="hidden" name="attributes[collection_layout]" value=""><svg focusable="false" class="icon icon--nav-triangle-borderless" viewBox="0 0 20 9" role="presentation">
                   <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>

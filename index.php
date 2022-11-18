@@ -17,7 +17,9 @@ require_once "controller/register_controller.php";
 require_once "controller/user_controller.php";
 require_once "controller/setting_controller.php";
 require_once "controller/search_controller.php";
+require_once "controller/cart_controller.php";
 
+if (!isset($_SESSION['cart'])) $_SESSION['cart'] = [];
 
 $ctr = isset($_GET['ctr']) ? $_GET['ctr'] : '/';
 
@@ -99,8 +101,6 @@ switch ($ctr) {
         break;
     case 'search':
         if (isset($_POST['btn_search']) && ($_POST['btn_search'])) {
-            // show_home();
-            // create_user_admin();
             check_search();
         };
         search();
@@ -110,6 +110,18 @@ switch ($ctr) {
             // create_user_admin();
         };
         edit_category();
+        break;
+    case 'addtocart':
+        if (isset($_POST['add_cart']) && ($_POST['add_cart'])) {
+            addcart();
+        };
+        show_cart();
+        break;
+    case 'cart':
+        show_cart();
+        break;
+    case 'deletecart':
+        dele_cart();
         break;
     default:
         // show_error();

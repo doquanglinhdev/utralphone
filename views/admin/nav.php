@@ -96,10 +96,11 @@
     </div>
     <li class="nav-item">
         <a class="nav-link" href="?ctr=setting">
-        <!-- <i class="fas fa-fw fa-chart-area"></i> -->
-        <i class="fas fa-solid fa-gear"></i>
+            <!-- <i class="fas fa-fw fa-chart-area"></i> -->
+            <i class="fas fa-solid fa-gear"></i>
 
-            <span>Cài đặt chung</span></a>
+            <span>Cài đặt chung</span>
+        </a>
     </li>
 
     <!-- <li class="nav-item">
@@ -192,6 +193,14 @@
                         </form>
                     </div>
                 </li>
+
+                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                <li class="nav-item dropdown no-arrow mx-1">
+                    
+                    <div id="DigitalCLOCK" class="nav-link dropdown-toggle" onload="showTime()"></div>
+
+                </li>
+                <script src="views/admin/assets/js/function.js"></script>
 
                 <!-- Nav Item - Alerts -->
                 <li class="nav-item dropdown no-arrow mx-1">
