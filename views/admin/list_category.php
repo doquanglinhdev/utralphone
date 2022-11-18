@@ -28,9 +28,11 @@
                                         <td><?php echo $value["id_cate"] ?></td>
                                         <td><?php echo $value["name_cate"] ?></td>
                                         <td><?php if($value["role"] == 1){
-                                                echo "Hiện";
+                                                echo "<span class='badge badge-success'>Hiện</span>
+                                                ";
                                         } else {
-                                            echo "Ẩn";
+                                            echo "<span class='badge badge-dark'>Ẩn</span>
+                                            ";
                                         }  ?></td>
                                         <td>
                                             <button class="btn btn-warning"><a class="text-white" href="?ctr=edit_category&id=<?php echo $value["id_cate"] ?>">Sửa</a></button>

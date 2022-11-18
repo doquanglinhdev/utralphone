@@ -30,7 +30,7 @@
                                     <tr>
                                         <td><?php echo $value["id_pro"] ?></td>
                                         <td><?php echo $value["name_pro"] ?></td>
-                                        <td><?php echo $value["price"] ?></td>
+                                        <td><?php echo number_format($value["price"])  ?></td>
                                         <td><?php echo $value["img_pro"] ?></td>
                                         <td><?php echo $value["short_des"] ?></td>
                                         <td><?php echo $value["view"] ?></td>

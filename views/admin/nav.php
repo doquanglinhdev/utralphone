@@ -152,7 +152,7 @@
     <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand bg-white topbar mb-4 static-top shadow">
 
             <!-- Sidebar Toggle (Topbar) -->
             <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -196,9 +196,9 @@
 
                 <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                 <li class="nav-item dropdown no-arrow mx-1">
-                    
-                    <div id="DigitalCLOCK" class="nav-link dropdown-toggle" onload="showTime()"></div>
 
+                    <div class="nav-link dropdown-toggle"><span class="badge badge-info" id="DigitalCLOCK" onload="showTime()"></span>
+                    </div>
                 </li>
                 <script src="views/admin/assets/js/function.js"></script>
 
