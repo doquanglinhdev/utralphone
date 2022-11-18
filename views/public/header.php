@@ -232,7 +232,7 @@
     <header class="header header--inline " role="banner">
       <div class="container">
         <div class="header__inner">
-          <h1 class="header__logo"><a href="index.php" class="header__logo-link"><img class="header__logo-image" src="views/public/images/logo.png" alt="HoangHaiMobile"><img class="header__logo-image logo-mobile"  width="1500" src="views/public/images/logo.png" alt="HoangHaiMobile"></a></h1>
+          <h1 class="header__logo"><a href="index.php" class="header__logo-link"><img class="header__logo-image" src="views/public/images/logo.png" alt="HoangHaiMobile"><img class="header__logo-image logo-mobile" width="1500" src="views/public/images/logo.png" alt="HoangHaiMobile"></a></h1>
           <div class="header__action-list">
             <div class="header__action-item hidden-tablet-and-up">
               <a class="header__action-item-link" href="/search" data-action="toggle-search" aria-expanded="false" aria-label="Tìm kiếm"><svg focusable="false" class="icon icon--search" viewBox="0 0 21 21" role="presentation">
@@ -473,13 +473,10 @@
             </div>
           </div>
           <div class="header__search-bar-wrapper ">
-            <form action="/search" method="get" role="search" class="search-bar">
+            <form action="?ctr=search" method="post" class="search-bar">
               <div class="search-bar__top-wrapper">
                 <div class="search-bar__top">
-                  <input type="hidden" name="type" value="product">
-                  <input type="hidden" name="options[prefix]" value="last">
-
-                  <button class="search-bar__submit" aria-label="Tìm kiếm"><svg focusable="false" class="icon icon--search" viewBox="0 0 21 21" role="presentation">
+                  <button class="search-bar__submit" aria-label="Tìm kiếm" name="btn_search" value="1"><svg focusable="false" class="icon icon--search" viewBox="0 0 21 21" role="presentation">
                       <g stroke-width="2" stroke="black" fill="none" fill-rule="evenodd">
                         <path d="M19 19l-5-5" stroke-linecap="square"></path>
                         <circle cx="8.5" cy="8.5" r="7.5"></circle>
@@ -492,10 +489,10 @@
                     </svg></button>
 
                   <div class="search-bar__input-wrapper">
-                    <input class="search-bar__input" type="text" name="q" autocomplete="off" autocorrect="off" aria-label="Nhập từ khóa tìm kiếm..." placeholder="Nhập từ khóa tìm kiếm...">
-                    <button type="button" class="search-bar__input-clear hidden-lap-and-up" data-action="clear-input"><svg focusable="false" class="icon icon--close" viewBox="0 0 19 19" role="presentation">
-                        <path d="M9.1923882 8.39339828l7.7781745-7.7781746 1.4142136 1.41421357-7.7781746 7.77817459 7.7781746 7.77817456L16.9705627 19l-7.7781745-7.7781746L1.41421356 19 0 17.5857864l7.7781746-7.77817456L0 2.02943725 1.41421356.61522369 9.1923882 8.39339828z" fill="currentColor" fill-rule="evenodd"></path>
-                      </svg></button>
+                      <input class="search-bar__input" type="text" name="look" autocomplete="off" autocorrect="off" aria-label="Nhập từ khóa tìm kiếm..." placeholder="Nhập từ khóa tìm kiếm...">
+                      <button type="button" class="search-bar__input-clear hidden-lap-and-up" name="btn_search" value="1"><svg focusable="false" class="icon icon--close" viewBox="0 0 19 19" role="presentation">
+                          <path d="M9.1923882 8.39339828l7.7781745-7.7781746 1.4142136 1.41421357-7.7781746 7.77817459 7.7781746 7.77817456L16.9705627 19l-7.7781745-7.7781746L1.41421356 19 0 17.5857864l7.7781746-7.77817456L0 2.02943725 1.41421356.61522369 9.1923882 8.39339828z" fill="currentColor" fill-rule="evenodd"></path>
+                        </svg></button>
                   </div>
                 </div>
 
@@ -609,14 +606,15 @@
             </li>
             <?php $all = category_all() ?>
             <?php foreach ($all as $valuee) {
-              if($valuee['role'] == 1){?>
+              if ($valuee['role'] == 1) { ?>
 
-              <li class="nav-bar__item">
-              <a href="" class="nav-bar__link link" data-type="menuitem" aria-expanded="false" aria-controls="" aria-haspopup="true"><img class="multicolumn-card__image" src="<?= $valuee['img_cate'] ?>" alt="" height="16" width="16" loading="lazy"><span><?= $valuee['name_cate'] ?></span>
-              </a>
-            </li>
-            <?php }} ?>
-            
+                <li class="nav-bar__item">
+                  <a href="" class="nav-bar__link link" data-type="menuitem" aria-expanded="false" aria-controls="" aria-haspopup="true"><img class="multicolumn-card__image" src="<?= $valuee['img_cate'] ?>" alt="" height="16" width="16" loading="lazy"><span><?= $valuee['name_cate'] ?></span>
+                  </a>
+                </li>
+            <?php }
+            } ?>
+
             <!-- <li class="nav-bar__item">
               <a href="/collections/laptop" class="nav-bar__link link" data-type="menuitem" aria-expanded="false" aria-controls="" aria-haspopup="true"><img class="multicolumn-card__image" srcset="//cdn.shopify.com/s/files/1/0653/8923/2347/files/laptop_2_1.png?v=1659173029 48w" src="//cdn.shopify.com/s/files/1/0653/8923/2347/files/laptop_2_1.png?v=1659173029&width=550" alt="" height="16" width="16" loading="lazy"><span>Macbook | Laptop</span>
               </a>
@@ -723,16 +721,16 @@
             Từ khóa phổ biến :
           </span><a class="recommended-search__text--item" href="">
             <span>
-              iphone 13 
+              iphone 13
             </span>
           </a><a class="recommended-search__text--item" href="">
             <span>
-              apple watch 
+              apple watch
             </span>
           </a>
           <a class="recommended-search__text--item" href="">
             <span>
-              macbook pro 
+              macbook pro
             </span>
           </a>
           </a>

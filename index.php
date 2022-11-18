@@ -16,6 +16,7 @@ require_once "controller/login_controller.php";
 require_once "controller/register_controller.php";
 require_once "controller/user_controller.php";
 require_once "controller/setting_controller.php";
+require_once "controller/search_controller.php";
 
 
 $ctr = isset($_GET['ctr']) ? $_GET['ctr'] : '/';
@@ -95,6 +96,14 @@ switch ($ctr) {
         break;
     case 'edit_product':
         edit_product();
+        break;
+    case 'search':
+        if (isset($_POST['btn_search']) && ($_POST['btn_search'])) {
+            // show_home();
+            // create_user_admin();
+            check_search();
+        };
+        search();
         break;
     case 'edit_category':
         if (isset($_POST['btn_save']) && ($_POST['btn_save'])) {

@@ -131,12 +131,12 @@ function product_one($id)
 // // }
 
 
-// function product_seacher($id)
-// {
-//     $conn = connection();
-//     $sql = "SELECT * FROM hang_hoa WHERE LOWER(ten_hh) LIKE LOWER('%$id%');";
-//     $stmt = $conn->prepare($sql);
-//     $stmt->execute();
-//     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//     return $result;
-// }
+function product_seacher($id)
+{
+    $conn = connection();
+    $sql = "SELECT * FROM product WHERE LOWER(name_pro) LIKE LOWER('%$id%');";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
