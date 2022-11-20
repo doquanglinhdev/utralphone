@@ -1,5 +1,7 @@
 <?php
 session_start();
+$tong = 0;
+$i = 0;
 require_once "models/connect.php";
 require_once "models/product.php";
 require_once "models/category.php";
@@ -7,7 +9,10 @@ require_once "models/login.php";
 require_once "models/logout.php";
 require_once "models/user.php";
 require_once "models/setting.php";
+require_once "models/bill.php";
+require_once "models/recovery.php";
 
+require_once "controller/sentmail.php";
 require_once "controller/controller.php";
 require_once "controller/home_controller.php";
 require_once "controller/product_controller.php";
@@ -18,6 +23,7 @@ require_once "controller/user_controller.php";
 require_once "controller/setting_controller.php";
 require_once "controller/search_controller.php";
 require_once "controller/cart_controller.php";
+require_once "controller/recovery_controller.php";
 
 if (!isset($_SESSION['cart'])) $_SESSION['cart'] = [];
 
@@ -57,10 +63,22 @@ switch ($ctr) {
         delete_cate();
         break;
     case 'login':
+        if (isset($_POST['recoverypass']) && ($_POST['recoverypass'])) {
+            recovery();
+        };
         if (isset($_POST['login']) && ($_POST['login'])) {
             login();
         };
         login_user();
+        break;
+    case 'recovery':
+        if (isset($_POST['login']) && ($_POST['login'])) {
+            login();
+        };
+        if (isset($_POST['recoverypass']) && ($_POST['recoverypass'])) {
+            recovery();
+        };
+        show_recover();
         break;
     case 'admin_login':
         if (isset($_POST['login']) && ($_POST['login'])) {
@@ -122,6 +140,16 @@ switch ($ctr) {
         break;
     case 'deletecart':
         dele_cart();
+        break;
+    case 'checkout':
+        if (isset($_POST['oder']) && ($_POST['oder'])) {
+            // addcart();
+            bill();
+        };
+        checkout();
+        break;
+    case 'invoice':
+        show_bill();
         break;
     default:
         // show_error();

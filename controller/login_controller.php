@@ -25,12 +25,11 @@ function login()
 }
 function login_admin()
 {
-    if(isset($_SESSION['admin'])){
+    if (isset($_SESSION['admin'])) {
         header('location: index.php?ctr=admin');
     } else {
         renderadmin("login");
     }
-    
 }
 function login_adminn()
 {

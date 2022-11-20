@@ -1,4 +1,5 @@
-<?php $setiing = setiing_show(); $count_pro = count_cart();?>
+<?php $setiing = setiing_show();
+$count_pro = count_cart(); ?>
 <!doctype html>
 <html class="no-js" lang="vi">
 
@@ -12,6 +13,7 @@
   <link rel="shortcut icon" href="//cdn.shopify.com/s/files/1/0653/8923/2347/files/only-logo-hoanghai-mobile_96x96.png?v=1661515559" type="image/png">
   <script src="//cdn.shopify.com/s/files/1/0653/8923/2347/t/22/assets/jqueryui.js?v=3841827695553272571666866960" defer>
   </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link href="//cdn.shopify.com/s/files/1/0653/8923/2347/t/22/assets/jqueryui.css?v=163747186686686371921666866960" rel="stylesheet" type="text/css" media="all" />
   <script src="//cdn.shopify.com/s/files/1/0653/8923/2347/t/22/assets/jquery-3.6.0.min.js?v=115860211936397945481666866960" defer></script>
   <link rel="preload" as="script" href="//cdn.shopify.com/s/files/1/0653/8923/2347/t/22/assets/slick.min.js?v=71779134894361685811666866960">
@@ -28,7 +30,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap&subset=vietnamese" rel="stylesheet">
-
+  <!-- <link  rel="stylesheet" type="text/css"  media="all" href="https://didongviet.vn/pub/static/frontend/ddv/default/vi_VN/css/styles-m.css?v=02194620221668824297" /> -->
+  <link rel="stylesheet" href="views/public/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hoàng Hải Mobile｜Website mua sắm điện thoại, đồng hồ hàng đầu tại Nhật">
   <meta property="og:description" content="Hoàng Hải Mobile｜Website mua sắm điện thoại, laptop, đồng hồ hàng đầu tại Nhật">
@@ -37,7 +41,16 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Hoàng Hải Mobile｜Website mua sắm điện thoại, đồng hồ hàng đầu tại Nhật">
   <meta name="twitter:description" content="Hoàng Hải Mobile｜Website mua sắm điện thoại, laptop, đồng hồ hàng đầu tại Nhật">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
+    * {
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+
     @font-face {
       font-family: "DIN Next";
       font-weight: 500;
@@ -489,10 +502,10 @@
                     </svg></button>
 
                   <div class="search-bar__input-wrapper">
-                      <input class="search-bar__input" type="text" name="look" autocomplete="off" autocorrect="off" aria-label="Nhập từ khóa tìm kiếm..." placeholder="Nhập từ khóa tìm kiếm...">
-                      <button type="button" class="search-bar__input-clear hidden-lap-and-up" name="btn_search" value="1"><svg focusable="false" class="icon icon--close" viewBox="0 0 19 19" role="presentation">
-                          <path d="M9.1923882 8.39339828l7.7781745-7.7781746 1.4142136 1.41421357-7.7781746 7.77817459 7.7781746 7.77817456L16.9705627 19l-7.7781745-7.7781746L1.41421356 19 0 17.5857864l7.7781746-7.77817456L0 2.02943725 1.41421356.61522369 9.1923882 8.39339828z" fill="currentColor" fill-rule="evenodd"></path>
-                        </svg></button>
+                    <input class="search-bar__input" type="text" name="look" autocomplete="off" autocorrect="off" aria-label="Nhập từ khóa tìm kiếm..." placeholder="Nhập từ khóa tìm kiếm...">
+                    <button type="button" class="search-bar__input-clear hidden-lap-and-up" name="btn_search" value="1"><svg focusable="false" class="icon icon--close" viewBox="0 0 19 19" role="presentation">
+                        <path d="M9.1923882 8.39339828l7.7781745-7.7781746 1.4142136 1.41421357-7.7781746 7.77817459 7.7781746 7.77817456L16.9705627 19l-7.7781745-7.7781746L1.41421356 19 0 17.5857864l7.7781746-7.77817456L0 2.02943725 1.41421356.61522369 9.1923882 8.39339828z" fill="currentColor" fill-rule="evenodd"></path>
+                      </svg></button>
                   </div>
                 </div>
 

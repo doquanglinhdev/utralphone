@@ -1,6 +1,6 @@
 <?php include_once "header.php" ?>
 <?php $tong = 0;
-$i = 0; ?>
+$i = 0;  ?>
 <main id="main" role="main">
     <div id="shopify-section-template--16613775769819__main" class="shopify-section">
         <section data-section-id="template--16613775769819__main" data-section-type="cart" data-section-settings='{
@@ -92,20 +92,15 @@ $i = 0; ?>
                             </div>
 
 
-                            <form class="cart-recap" method="post" action="" novalidate="novalidate" data-item-count="1">
+                            <form class="cart-recap" method="post" action="?ctr=checkout" novalidate="novalidate" data-item-count="1">
                                 <div class="cart-recap__scroller">
                                     <div class="card">
                                         <div class="card__section">
                                             <div class="text__label__content">
                                                 <span>Tiền hàng</span>
 
-                                                <span class="page-title-h4 cart-recap__price-line-price"><?= number_format($tong)  ?></span>
+                                                <span class="page-title-h4 cart-recap__price-line-price"><?= number_format($tong)  ?> đ</span>
                                             </div>
-                                            <!-- 
-                                            <div class="text__label__content">
-                                                <span>Giảm giá</span>
-                                                <span class="text__label__normal"><span>¥2,000</span></span>
-                                            </div> -->
                                             <div class="text__label__content">
                                                 <span>Vận chuyển</span>
                                                 <span class="text__label__normal">Bước tiếp theo</span>
@@ -113,7 +108,7 @@ $i = 0; ?>
                                             <div class="text__label__seperate"></div>
                                             <div class="text__label__content">
                                                 <span>Tạm tính</span>
-                                                <span class="page-title-h4"><?= number_format($tong)  ?></span>
+                                                <span class="page-title-h4"><?= number_format($tong)  ?> đ</span>
                                             </div>
                                         </div>
                                     </div>

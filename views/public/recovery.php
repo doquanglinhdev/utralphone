@@ -53,8 +53,28 @@
                     <div class="product-tab__content product-tab__description">
 
                         <div class="product-tab__inner">
+                            <form method="post" action="?ctr=recovery" id="recover_customer_password" accept-charset="UTF-8" name="recover" class="form form--main" style="display: block">
+                                <header class="form__header">
+                                    <h1 class="form__title heading h1">Khôi phục lại mật khẩu</h1>
+                                    <p class="form__legend">Nhập email của bạn : </p>
+                                </header>
+                                <div class="form__input-wrapper form__input-wrapper--labelled">
+                                    <input placeholder="Email" type="email" id="customer[recover_email]" class="form__field form__field--text" name="mail" required="required">
+                                </div>
+                                <?php if (isset($_COOKIE['successmail'])) : ?>
+                                    <p style="color: green">
+                                        <?= $_COOKIE['successmail'] ?>
+                                    </p>
+                                <?php endif ?>
+                                <button type="submit" name="recoverypass" value="1" class="form__submit button button--primary button--full">Khôi phục</button>
+                                <div class="form__secondary-action">
+                                    <p>Đã nhớ mật khẩu của bạn?
+                                        <button type="button" data-action="toggle-login-form" class="link link--accented">Quay lại đăng nhập</button>
+                                    </p>
+                                </div>
+                            </form>
 
-                            <form method="post" action="?ctr=login" id="customer_login" name="login" class="form form--main" style="display: block">
+                            <form method="post" action="?ctr=login" id="customer_login" accept-charset="UTF-8" name="login" class="form form--main" style="display: none">
                                 <input type="hidden" name="role" value="" />
                                 <div class="form__input-wrapper form__input-wrapper--labelled">
                                     <input placeholder="Username" type="text" class="form__field form__field--text" name="username" required="required">
@@ -69,36 +89,12 @@
                                     </p>
                                 <?php endif ?>
                                 <button type="submit" name="login" value="1" class="form__submit button button--primary button--full">Đăng nhập</button>
-                                <!-- <button type="submit" id="login" value="1" class="form__submit button button--primary button--full">Đăng nhập</button> -->
 
                                 <div class="form__secondary-action">
                                     <p>Khách hàng mới ? <a href="/account/register" class="link link--accented">Tạo tài khoản</a>
                                     </p>
                                     <p>Quên mật khẩu ?
                                         <button type="button" data-action="toggle-login-form" class="link link--accented">Khôi phục mật khẩu</button>
-                                    </p>
-                                </div>
-                            </form>
-
-                            <form method="post" action="?ctr=recovery" id="recover_customer_password" accept-charset="UTF-8" name="recover" class="form form--main" style="display: none">
-                                <input type="hidden" name="form_type" value="recover_customer_password" />
-                                <input type="hidden" name="utf8" value="✓" />
-                                <header class="form__header">
-                                    <h1 class="form__title heading h1">Khôi phục lại mật khẩu</h1>
-                                    <p class="form__legend">Nhập email của bạn : </p>
-                                </header>
-                                <div class="form__input-wrapper form__input-wrapper--labelled">
-                                    <input placeholder="Email" type="email" id="customer[recover_email]" class="form__field form__field--text" name="email" required="required">
-                                </div>
-                                <?php if (isset($_COOKIE['successmail'])) : ?>
-                                    <p style="color: green">
-                                        <?= $_COOKIE['successmail'] ?>
-                                    </p>
-                                <?php endif ?>
-                                <button type="submit" name="recoverypass" class="form__submit button button--primary button--full" value="1">Khôi phục</button>
-                                <div class="form__secondary-action">
-                                    <p>Đã nhớ mật khẩu của bạn?
-                                        <button type="button" data-action="toggle-login-form" class="link link--accented">Quay lại đăng nhập</button>
                                     </p>
                                 </div>
                             </form>
@@ -116,35 +112,6 @@
                 document.getElementById('recover_customer_password').style.display = 'block';
             }
         </script>
-        <!-- <script>
-            $(document).ready(function() {
-                // Bắt sự kiện khi người dùng click vào button
-                $('#login').click(function(e) {
-                    // Ngăn không cho load lại trang
-                    e.preventDefault();
-                    //Lấy giá trị của 2 ô input
-                    let username = $('input[name="username"]').val(),
-                        password = $('input[name="password"]').val();
-
-                    // Gửi request đến file calculate.php để xử lý với tham số là bien1 và bien2
-                    $.ajax({
-                        url: '?ctr=login',
-                        type: 'POST',
-                        data: {
-                            username1: username,
-                            password1: password
-                        },
-                        // Nếu thành công thì hiển thị kết quả ra trình duyệt
-                        success: function(response) {
-                            // $('input[name="result"]').val(response);
-                        },
-                        error: function(error) {
-                            console.log(error);
-                        }
-                    });
-                });
-            });
-        </script> -->
     </section>
 </main>
 <?php include_once "footer.php" ?>
